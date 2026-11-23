@@ -188,14 +188,8 @@ static void frontend_orbis_shutdown(bool unused) { }
 
 static bool frontend_orbis_init_app(void)
 {
-	if (initOrbisLinkAppVanillaGl() == 0)
-	{
-		debugNetInit(PC_DEVELOPMENT_IP_ADDRESS,PC_DEVELOPMENT_UDP_PORT,3);
-		debugNetPrintf(DEBUGNET_INFO,"Ready to have a lot of fun\n");
-		sceSystemServiceHideSplashScreen();
-		return true;
-	}
-	return false;
+	sceSystemServiceHideSplashScreen();
+	return true;
 }
 
 static void frontend_orbis_init(void *data)
