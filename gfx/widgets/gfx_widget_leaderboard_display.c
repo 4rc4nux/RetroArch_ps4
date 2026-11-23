@@ -25,6 +25,12 @@
 
 #include "../../cheevos/cheevos.h"
 
+
+/* Declared before use: the frame callback above calls this, but it is
+ * defined further down. The Orbis build treats implicit declarations
+ * as errors (-Werror). */
+void gfx_widget_set_achievement_progress(const char* badge, const char* progress);
+
 #define CHEEVO_LBOARD_ARRAY_SIZE 4
 #define CHEEVO_CHALLENGE_ARRAY_SIZE 8
 
